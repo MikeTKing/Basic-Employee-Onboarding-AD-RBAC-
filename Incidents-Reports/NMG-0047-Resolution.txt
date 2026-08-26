@@ -1,0 +1,15 @@
+Ticket number: NMG-0047
+
+Affected user: Jane Cooper (jcooper@NMG.com)
+
+Issue reported: User was unable to access HR shared resources. Desktop policies and mapped network drives did not match those of her teammates.
+
+Root cause: Investigation revealed two related misconfigurations. First, Jane's user account was placed in the Operations OU instead of the HR OU, meaning she was not receiving the Group Policy Objects (GPOs) scoped to HR — specifically the drive mappings and desktop policies tied to that OU. Second, her security group membership reflected the same error: she had been added to Operations-Users rather than HR-Users, which meant she lacked the permissions HR resources require and was inadvertently retaining access tied to Operations instead.
+
+Fix applied: Moved Jane Cooper's user account from the Operations OU to the HR OU so she would inherit the correct GPOs for drive mappings and desktop settings. Then updated her group membership by removing her from Operations-Users and adding her to HR-Users, aligning her permissions with her actual role and department.
+
+Verification: Confirmed the OU move by opening the HR OU in Active Directory Users and Computers and verifying Jane's account appeared alongside her HR teammates. Confirmed the group membership fix by opening the HR-Users group and verifying Jane (jcooper) was listed as an active member, and by checking the "Member Of" tab on her account properties to confirm Operations-Users had been removed and HR-Users was present.
+
+Date resolved: 8/23/2026
+
+Resolved by: Michael King
