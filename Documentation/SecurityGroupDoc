@@ -1,1 +1,15 @@
+OU Names: HR, IT, Finance, and Operations
+Group names: HR-Users, IT-Users, Finance-Users, and Operations-Users
 
+Group Overview:
+HR (OU) / HR-Users (Security Group)
+Houses user accounts for Human Resources staff. HR-Users grants access to HR-specific resources — employee records, onboarding systems, and HR shared drives — while keeping that data segmented from other departments.
+
+IT (OU) / IT-Users (Security Group)
+Houses user accounts for IT staff (admins, security analysts, help desk, systems engineers). IT-Users is used to grant elevated or department-specific access — things like helpdesk tools, server management, and internal IT resources — separate from general end-user permissions.
+
+Finance (OU) / Finance-Users (Security Group)
+Houses user accounts for Finance department staff. Finance-Users controls access to financial systems, accounting software, and sensitive financial data shares, restricting visibility to authorized personnel only.
+
+Operations (OU) / Operations-Users (Security Group)
+Houses user accounts for Operations staff (managers, coordinators, facilities, scheduling). Operations-Users grants access to operational tools and shared resources tied to day-to-day business operations.
