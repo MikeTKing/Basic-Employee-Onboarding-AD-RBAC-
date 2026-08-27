@@ -8,7 +8,7 @@ Northstar Medical Group's IT environment had been mismanaged by a previous MSP, 
 I rebuilt the domain from scratch, standing up NMG.com and promoting the first domain controller before designing a clean organizational structure around four core departments: IT, HR, Finance, and Operations. Each department was given its own OU along with a matching security group (IT-Users, HR-Users, Finance-Users, Operations-Users) to enforce a flat RBAC model — access is scoped by department membership rather than individual, one-off permissions. User provisioning was standardized using PowerShell scripts with the ActiveDirectory module, ensuring every account was created with consistent naming conventions (first-initial + last name), correct UPNs, job titles, and department attributes, then automatically assigned to the correct security group. This structure was validated in a real incident (NMG-0047), where a misplaced user account and incorrect group membership were diagnosed and corrected, confirming that the OU/group design actually enforces the intended access boundaries.
 
 ## Video Walkthrough
-[Video walkthrough link placeholder — will be added after recording]
+[[Video walkthrough link placeholder — will be added after recording](https://www.loom.com/share/e74d39d155864dae8380d302f939be1d)]
 
 ## Tools Used
 * Windows Server
